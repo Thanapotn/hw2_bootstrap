@@ -1,0 +1,44 @@
+/* Default styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hero section image adjustments */
+.carousel img {
+    object-fit: cover; /* Crop image to fit container */
+    height: 300px; /* Default height */
+}
+
+/* Card image adjustments */
+.card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .carousel img {
+        height: 500px; /* Larger height for tablets and desktops */
+    }
+
+    .card img {
+        height: 300px; /* Adjust card image height */
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel img {
+        height: 600px; /* Even larger for large desktops */
+    }
+
+    .card img {
+        height: 400px; /* Adjust card image height */
+    }
+}
