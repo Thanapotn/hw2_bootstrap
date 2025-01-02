@@ -1,6 +1,15 @@
 /* Default styling */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
 }
 
 img {
@@ -10,35 +19,78 @@ img {
     margin: 0 auto;
 }
 
-/* Hero section image adjustments */
+/* Navbar */
+.navbar {
+    background-color: #000 !important; /* บังคับเปลี่ยนเป็นสีดำ */
+}
+
+.navbar a {
+    color: #fff; /* เปลี่ยนสีข้อความเป็นสีขาว */
+}
+
+.navbar a:hover {
+    color: #ccc; /* สีข้อความเมื่อเมาส์ชี้ */
+}
+
+/* Hero Section */
 .carousel img {
-    object-fit: cover; /* Crop image to fit container */
-    height: 300px; /* Default height */
-}
-
-/* Card image adjustments */
-.card img {
     object-fit: cover;
-    height: 200px;
+    height: 250px; /* Default height for mobile */
 }
 
-/* Responsive adjustments */
 @media (min-width: 768px) {
     .carousel img {
-        height: 500px; /* Larger height for tablets and desktops */
-    }
-
-    .card img {
-        height: 300px; /* Adjust card image height */
+        height: 400px; /* For tablets */
     }
 }
 
 @media (min-width: 1200px) {
     .carousel img {
-        height: 600px; /* Even larger for large desktops */
+        height: 600px; /* For desktops */
+    }
+}
+
+/* Grid Cards */
+.card img {
+    object-fit: cover;
+    height: 150px; /* Default height for mobile */
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .card img {
+        height: 250px; /* For tablets */
+    }
+}
+
+@media (min-width: 1200px) {
+    .card img {
+        height: 300px; /* For desktops */
+    }
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
     }
 
-    .card img {
-        height: 400px; /* Adjust card image height */
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
